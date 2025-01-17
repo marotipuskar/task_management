@@ -32,9 +32,9 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Routes
 app.use('/tasks', require('./routes/tasks'));
-app.get("/", (req, res)=>{
-  res.send("hello")
-})
+// app.get("/", (req, res)=>{
+//   res.send("hello")
+// })
 
 // Start the server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
