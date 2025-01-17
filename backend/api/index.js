@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 5000;
 app.use(cors(
   {
     origin: ["https://frontend-task-management-wine.vercel.app/"],
-    methods:["post", "GET"],
-    // credentials: true
+   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true, // If cookies or authentication are used
   }
 ));
 app.use(express.json());
