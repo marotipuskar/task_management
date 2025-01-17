@@ -4,12 +4,12 @@ import axios from 'axios';
 
 const TaskItem = ({ task, fetchTasks }) => {
   const handleDelete = async () => {
-    await axios.delete(`http://localhost:5000/tasks/${task._id}`);
+    await axios.delete(`https://backend-task-management-dun.vercel.app/${task._id}`);
     fetchTasks();
   };
 
   const handleMove = async (status) => {
-    await axios.put(`http://localhost:5000/tasks/${task._id}`, { status });
+    await axios.put(`https://backend-task-management-dun.vercel.app/${task._id}`, { status });
     fetchTasks();
   };
 
