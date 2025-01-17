@@ -13,7 +13,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   const fetchTasks = async () => {
-    const res = await axios.get('http://localhost:5000/tasks');
+    const res = await axios.get('https://backend-task-management-dun.vercel.app/');
     setTasks(res.data);
   };
 
