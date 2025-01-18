@@ -10,7 +10,7 @@ const TaskForm = ({ fetchTasks }) => {
   const handleSubmit = async (e) => {
     
     e.preventDefault();
-    await axios.post('https://task-management-backend-azure.vercel.app', { title, description });
+    await axios.post('https://task-management-backend-azure.vercel.app/tasks', { title, description });
     // axios.post(`${backendUrl}/tasks`, { title: "Task Title", description: "Task Description" })
       .then(response => console.log(response))
       .catch(error => console.error(error));
