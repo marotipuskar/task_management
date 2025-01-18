@@ -11,7 +11,7 @@ const TaskForm = ({ fetchTasks }) => {
     
     e.preventDefault();
     // await axios.post('https://backend-task-management-dun.vercel.app/', { title, description });
-    await axios.post(`${backendUrl}/tasks`, { title: "Task Title", description: "Task Description" })
+    axios.post(`${backendUrl}/tasks`, { title: "Task Title", description: "Task Description" })
       .then(response => console.log(response))
       .catch(error => console.error(error));
     setTitle("");
