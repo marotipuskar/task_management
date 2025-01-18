@@ -4,12 +4,12 @@ import axios from 'axios';
 
 const TaskItem = ({ task, fetchTasks }) => {
   const handleDelete = async () => {
-    await axios.delete(`https://task-management-backend-azure.vercel.app/${task._id}`);
+    await axios.delete(`https://task-management-backend-azure.vercel.app/tasks/${task._id}`);
     fetchTasks();
   };
 
   const handleMove = async (status) => {
-    await axios.put(`https://task-management-backend-azure.vercel.app/${task._id}`, { status });
+    await axios.put(`https://task-management-backend-azure.vercel.app/tasks/${task._id}`, { status });
     fetchTasks();
   };
 
